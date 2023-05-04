@@ -10,7 +10,7 @@
 						? player2.value.labelColor
 						: ''
 				} 
-				border flex items-center justify-center text-xl
+				border flex items-center justify-center sm:text-xl text-sm
 				${
 					!player1.value.active && !player2.value.active
 						? ''
