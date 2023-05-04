@@ -2,7 +2,7 @@
 	<div class="flex flex-col mt-4">
 		<div class="flex" v-for="(row, x) in board" :key="x">
 			<div
-				:class="`w-28 h-28 m-1
+				:class="`sm:w-28 sm:h-28 min-h-[5rem] min-w-[5rem]  m-1
 				${
 					cell === player1.value.label
 						? player1.value.labelColor

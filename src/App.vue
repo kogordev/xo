@@ -3,21 +3,23 @@
 		<div
 			class="sm:border sm:border-gray-300 sm:w-[32rem] rounded mx-auto flex flex-col items-center"
 		>
-			<h1 class="uppercase text-4xl font-bold mt-12">tic tac toe</h1>
-			<div class="w-[22rem] flex justify-between items-center mt-6">
-				<PlayerInfo :playerObj="player1" />
-				<h2 class="text-xl font-bold">vs</h2>
-				<PlayerInfo :playerObj="player2" />
-			</div>
-			<Board
-				:board="board"
-				:player1="player1"
-				:player2="player2"
-				@draw="draw"
-			/>
-			<div class="w-[22rem] flex items-center justify-between mt-4">
-				<PinkButton @NewGame="newGame(true)" />
-				<BlueButton @ClearBoard="clear(true)" />
+			<div class="flex flex-col items-center">
+				<h1 class="uppercase text-4xl font-bold mt-12">tic tac toe</h1>
+				<div class="w-full flex justify-between items-center mt-6">
+					<PlayerInfo :playerObj="player1" />
+					<h2 class="text-xl font-bold">vs</h2>
+					<PlayerInfo :playerObj="player2" />
+				</div>
+				<Board
+					:board="board"
+					:player1="player1"
+					:player2="player2"
+					@draw="draw"
+				/>
+				<div class="w-full flex items-center justify-between mt-4">
+					<PinkButton @NewGame="newGame(true)" />
+					<BlueButton @ClearBoard="clear(true)" />
+				</div>
 			</div>
 		</div>
 	</div>
