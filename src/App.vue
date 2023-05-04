@@ -10,16 +10,8 @@
 		</div>
 		<Board :board="board" :player1="player1" :player2="player2" @draw="draw" />
 		<div class="w-[22rem] flex items-center justify-between mt-4">
-			<Button
-				label="New Game"
-				color="pink"
-				@do="newGame((isToServer = true))"
-			/>
-			<Button
-				label="Clear Board"
-				color="blue"
-				@do="clear((isToServer = true))"
-			/>
+			<PinkButton @NewGame="newGame(true)" />
+			<BlueButton @ClearBoard="clear(true)" />
 		</div>
 	</div>
 </template>
@@ -27,7 +19,8 @@
 <script setup>
 import PlayerInfo from './components/PlayerInfo.vue';
 import Board from './components/Board.vue';
-import Button from './components/Button.vue';
+import PinkButton from './components/PinkButton.vue';
+import BlueButton from './components/BlueButton.vue';
 import Player from './player';
 import { computed, onMounted, reactive, ref } from 'vue';
 import io from 'socket.io-client';
@@ -184,6 +177,7 @@ const draw = (cellAxis) => {
 	if (board.value[row][column] || winner.value) {
 		return;
 	}
+
 	//send axes to server for the other player
 	if (isToServer) socket.emit('draw', [row, column]);
 	board.value[row][column] = activePlayer.value.label;
