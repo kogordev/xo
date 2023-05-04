@@ -5,7 +5,7 @@
 		<Transition name="fade">
 			<BlinkingStatus class="absolute top-0" v-if="playerObj.value.active" />
 		</Transition>
-		<span class="text-xl font-bold">{{ playerObj.value.label }}</span>
+		<span class="sm:text-xl font-bold">{{ playerObj.value.label }}</span>
 		<span class="text-gray-400">{{ playerObj.value.wins }}</span>
 	</div>
 </template>
