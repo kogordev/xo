@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			screens: {
-				smobile: { raw: '(min-height: 700px)' },
+				smobile: { raw: '(min-height: 640px)' },
 				sm: '640px',
 				md: '768px',
 			},
