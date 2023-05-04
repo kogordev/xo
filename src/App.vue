@@ -1,7 +1,7 @@
 <template>
 	<div class="container w-screen h-screen flex justify-center items-center">
 		<div
-			class="container sm:border sm:border-gray-300 rounded mx-auto flex flex-col items-center"
+			class="sm:border sm:border-gray-300 sm:w-[32rem] rounded mx-auto flex flex-col items-center"
 		>
 			<h1 class="uppercase text-4xl font-bold mt-12">tic tac toe</h1>
 			<div class="w-[22rem] flex justify-between items-center mt-6">
