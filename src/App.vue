@@ -7,7 +7,7 @@
 				<h1 class="uppercase text-4xl font-bold mt-12">tic tac toe</h1>
 				<div class="w-full flex justify-between items-center mt-6">
 					<PlayerInfo :playerObj="player1" />
-					<h2 class="text-xl font-bold">vs</h2>
+					<h2 class="sm:text-xl text-xl font-bold">vs</h2>
 					<PlayerInfo :playerObj="player2" />
 				</div>
 				<Board

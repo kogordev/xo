@@ -1,6 +1,6 @@
 <template>
 	<div
-		:class="`relative border rounded ${playerObj.value.borderColor} w-28 flex justify-between items-center p-3 cursor-default mx-1`"
+		:class="`relative border rounded ${playerObj.value.borderColor} sm:w-28 w-[5.5rem] flex justify-between items-center p-3 cursor-default mx-1`"
 	>
 		<Transition name="fade">
 			<BlinkingStatus class="absolute top-0" v-if="playerObj.value.active" />
